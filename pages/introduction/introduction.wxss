@@ -1,0 +1,147 @@
+/* pages/introduction/introduction.wxss */
+.card {
+  margin: 10px;
+  position: relative;
+}
+
+.background {
+  padding-bottom: 50px;
+  height: 200px;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 0 7px #5f687e;
+}
+
+.logo {
+  width: 60px;
+  position: absolute; /*绝对定位*/
+  top: 10px;
+  right: 10px;
+}
+
+.info {
+  position: absolute;
+  left: 20px;
+  bottom: 10px;
+  font-size: 14px;
+  color: #00561F;
+  text-align: left;
+}
+
+.name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.type {
+  margin-bottom: 0px;
+}
+
+.list {
+  position: relative;
+  text-align: left;
+}
+
+.icon {
+  width: 22px;
+}
+
+.list-intro {
+  position: absolute;
+  font-size:medium;
+}
+
+.reserve {
+  width: 690rpx;
+  height: 88rpx;
+  font-size: 36rpx;
+  background: #87cefa;
+  color: #fff;
+}
+
+.reserveTitle {
+  padding-top: 20px;
+  text-align: center;
+  font-size: 50rpx;
+  font-weight: 1000;
+}
+
+.Info-title{
+  display: flex;
+  width: 100%;
+  height: 70rpx;
+  border-top: 2rpx solid #1e6c9c;
+  border-left: 2px solid #1e6c9c;
+  border-right: 2px solid #1e6c9c;
+  text-align: center;
+  background-color: rgb(236, 247, 247);
+}
+  
+.Info{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 50rpx;
+  border-bottom: 2rpx solid #1e6c9c;
+  border-left: 2px solid #1e6c9c;
+  border-right: 2px solid #1e6c9c;
+  text-align: center;
+  background-color: rgb(214, 214, 214);
+  font-size: 32rpx;
+  font-weight: 700;
+}
+
+.dateView {
+  padding: 32rpx;
+  height:100rpx;
+  display: flex;
+  align-items: center;
+  background:#fff;
+}
+
+.dateLeft {
+  display: flex;
+  font-size: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.dateRight {
+  display: flex;
+  font-size: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.dateView>view {
+  flex: 1;
+  text-align: center;
+  color:#333;
+  font-size: 34rpx;
+}
+
+.tablePosition {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.reserveTable {
+  padding-top: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  height: 1px;
+}
+
+.period {
+  width: 80rpx;
+  font-size: medium;
+  height: 20px;
+}
+
+.periodBox {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 14%;
+  text-align: center;
+  height: 20px;
+}

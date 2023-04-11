@@ -1,0 +1,84 @@
+/* pages/login/login.wxss */
+page{
+  background: #F0EFF5;
+}
+
+.user_info{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.profile{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  margin-top: 30rpx;
+  margin-bottom: 10rpx;
+}
+
+.loginPic{
+  display: flex;
+  justify-content: center;
+}
+
+#Logout_button{
+  width: 690rpx;
+  height: 80rpx;
+  font-size: 36rpx;
+  background: #87cefa;
+  color: #fff;
+}
+
+.loginPic image{
+  width: 750rpx;
+  height: 140rpx;
+}
+
+#loginInput{
+  background: #fff;
+  padding: 0 30rpx;
+}
+
+#loginInput > input{
+  height: 88rpx;
+}
+
+#loginInput > input:nth-child(1){
+  border-bottom: 1rpx solid #F1F1F1;
+}
+
+#loginInput > input:nth-child(2){
+  border-top: 1rpx solid #F1F1F1;
+  margin-top: 10rpx;
+}
+
+#loginButton{
+  width: 690rpx;
+  margin: 66rpx auto 0;
+}
+
+#loginButton > button{
+  width: 690rpx;
+  height: 88rpx;
+  font-size: 36rpx;
+}
+
+#loginButton > button:nth-child(1){
+  background: #87cefa;
+  color: #fff;
+}
+
+/* #loginButton > button:nth-child(2){
+  background: #fff;
+  color: #87cefa;
+  border: 2rpx solid #87cefa;
+  margin: 36rpx 0;
+} */
+
+#loginButton > view{
+  font-size: 30rpx;
+  color: #38a9f0;
+  text-align: center;
+}

@@ -1,0 +1,36 @@
+<!--pages/User/User.wxml-->
+<view class="userPic">
+  <!-- <image src="/img/background1.jpg"></image> -->
+  <image src="{{userInfo.avatarUrl}}"></image>
+  <text>用户名：{{userInfo.nickName}}</text>
+  <image src="/icons/setting.png" bindtap="toSetting"></image>
+</view>
+<!-- <view id="userInfo"> -->
+  <!-- <view>用户名：</view> -->
+  <!-- <text>用户名：{{userInfo.nickName}}</text> -->
+  <!-- <view>邮箱：test1@mail2.sysu.com</view> -->
+<!-- </view> -->
+<view class="myMeeting">
+  <view class="mmTitle">
+    <view class="mmTitle-text">我的会议</view>
+    <!-- <view class="mmTitle-more" bindtap="">查看更多 ></view> -->
+  </view>
+  <!-- <view class="mmList"> -->
+  <view class="mmList" wx:for="{{myMeeting}}" wx:for-item="item" wx:key="id" id="{{item._id}}" wx:if="{{index>=0}}">
+    <view class="mmList-item" bindtap="viewDetail" data-item="{{item}}">
+      <text class="mmList-text">{{item.day}}</text>
+      <text class="mmList-text">{{item.address}}</text>
+      <text class="mmList-text">{{item.begintime+"-"+item.endtime}}</text>
+      <text class="mmList-text">{{item.status}}</text>
+      <view class="mmList-more"></view>
+    </view>
+    <view class="mmList-margin"></view>
+  </view>
+  <!-- </view> -->
+</view>
+<!-- <view id="userButton">
+  <button bindtap="changeProfile">更换头像</button>
+  <button bindtap="changeNickname">修改昵称</button>
+  <button type="warn" bindtap="Logout" id="button1">退出登录</button>
+</view>
+<inputer hide="{{hideController}}" bind:changeNn="refreshNickname"></inputer> -->

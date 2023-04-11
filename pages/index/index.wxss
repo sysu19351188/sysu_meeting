@@ -1,0 +1,66 @@
+/**index.wxss**/
+
+.card {
+  margin: 10px;
+  position: relative;
+}
+
+.background {
+  padding-bottom: 50px;
+  height: 200px;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 0 7px #5f687e;
+}
+
+.logo {
+  width: 60px;
+  position: absolute; /*绝对定位*/
+  top: 10px;
+  right: 10px;
+}
+
+.Greeting {
+  position: absolute;
+  left: 20px;
+  top: 40px;
+  font-size: 14px;
+  color: #00561F;
+  text-align: left;
+}
+
+.info {
+  position: absolute;
+  left: 20px;
+  bottom: 10px;
+  font-size: 14px;
+  color: #00561F;
+  text-align: left;
+}
+.Notice {
+  position: absolute;
+  right: 45%;
+}
+
+.name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.type {
+  margin-bottom: 0px;
+}
+
+.gray {
+  padding-bottom: 50px;
+  height: 200px;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 0 7px #5f687e;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray;
+}

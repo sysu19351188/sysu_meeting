@@ -1,0 +1,70 @@
+<view class="title">预约信息填写</view>
+<view class="divLine"></view>
+
+<picker value="{{addrIndex}}" range="{{addrArray}}" bindchange="SelectAddr">
+<view class="content">
+  <view class="text">
+    会议地点:
+  </view>
+  <view class="picker">
+    {{addrArray[addrIndex]}}
+  </view>
+</view>
+</picker>
+
+<picker mode="date" value="{{date}}" start="{{begin}}" end="{{limit}}" bindchange="SelectDate">
+<view class="content">
+  <view class="text">
+    会议日期:
+  </view>
+  <view class="picker">
+    {{date}}
+  </view>
+</view>
+</picker>
+
+<view wx:if="{{date&&address&&!isNoMeeting}}">
+  <picker value="{{startIndex}}" range="{{startArray}}" bindchange="BeginTime">
+  <view class="content">
+    <view class="text">
+      开始时间:
+    </view>
+    <view class="picker">
+      {{startArray[startIndex]}}
+    </view>
+  </view>
+  </picker>
+
+  <picker value="{{endIndex}}" range="{{endArray}}" bindchange="EndTime">
+  <view class="content">
+    <view class="text">
+      结束时间:
+    </view>
+    <view class="picker">
+      {{endArray[endIndex]}}
+    </view>
+  </view>
+  </picker>
+</view>
+
+<form bindsubmit="submit" bindreset="reset">
+  <view class="content-input">
+    <text class="text">会议主持:</text>
+    <input class="input" name="compere" placeholder="请输入主持人名字" placeholder-style='text-align:right' value="{{compere}}"/>
+  </view>
+
+<view class="content-input">
+  <text class="text">参会人数:</text>
+  <input class="input" name="peopleNum" placeholder="请输入数字" placeholder-style='text-align:right' value="{{num}}"/>
+</view>
+<view class="content-input">
+  <text class="text">备注信息:</text>
+  <textarea class="input_textarea" name="remark" placeholder="不超过20个字" placeholder-style='text-align:right' maxlength="20" value="{{remark}}" ></textarea>
+</view>
+<view>
+  <button class="submit" formType="submit">提交</button>
+</view>
+<view>
+  <button class="reset" formType="reset">重置</button>
+</view>
+</form>

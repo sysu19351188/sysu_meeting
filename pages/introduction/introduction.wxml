@@ -1,0 +1,91 @@
+<!--pages/introduction/introduction.wxml-->
+<view class="card" >
+  <image class="background" src="{{image}}" ></image>
+  <!-- <image class="logo" src="../../img/log.jpg" mode="widthFix"></image> -->
+  <view class="info">
+    <view class="name">{{addr}}</view>
+    <view class="type">{{labels}}；{{introduction}}</view>
+  </view>
+</view>
+
+<view class="intro">
+  <view class="list">
+    <image class="icon" 
+      mode="widthFix"
+      src="../../icons/location.png"></image>
+      <text class="list-intro" 
+      style="padding-left: 5px;">{{addr}}</text>
+  </view>
+  <view class="list">
+    <image class="icon" 
+      mode="widthFix"
+      src="../../icons/people.png"></image>
+    <text class="list-intro" 
+      style="padding-left: 5px;">可容纳{{capacity}}人</text>
+  </view>
+  <view class="list">
+    <image class="icon"
+      mode="widthFix"
+      src="../../icons/tools.png"></image>
+      <text class="list-intro" 
+      style="padding-left: 5px;">内有{{introduction}}</text>
+  </view>
+</view>
+
+<button class='reserve' bindtap="jumpReserve" data-item="{{addr}}">预约此会议室</button>
+
+<view class="reserveTitle">预约情况</view>
+
+<view class="dateView">
+  <!-- <image class="dateLeft" bindtap="prevWeek" src="../../res/imgs/dateLeft.png"></image> -->
+  <view class="dateLeft"><button bindtap="prevWeek">上周</button></view>
+  <view>{{weekDates[1]}} 至 {{weekDates[7]}}</view>
+  <view class="dateRight"><button bindtap="nextWeek">下周</button></view>
+  <!-- <image class="dateRight" bindtap="nextWeek" src="../../res/imgs/dateRight.png"></image> -->
+</view>
+
+<view class="tablePosition">
+  <view class="reserveTable">
+    <view class="periodBox">时段</view>
+    <view class="periodBox">一</view>
+    <view class="periodBox">二</view>
+    <view class="periodBox">三</view>
+    <view class="periodBox">四</view>
+    <view class="periodBox">五</view>
+    <view class="periodBox">六</view>
+    <view class="periodBox">日</view>
+  </view>
+  <view style="padding-top: 10px;"></view>
+  <view class="reserveTable">
+    <block wx:for="{{slot}}" wx:for-index="i">
+      <block wx:if="{{i==0}}">
+        <view class="periodBox">
+          <block wx:for="{{slot[i]}}" wx:for-index="j">
+            <view class="period" style="border: 3rpx solid #000000">{{j+7}}</view>
+          </block>
+        </view>
+      </block>
+      <block wx:else>
+        <view class="periodBox">
+          <block wx:for="{{slot[i]}}" wx:for-index="j">
+            <block wx:if="{{slot[i][j]==1}}">
+              <view style="border: 3rpx solid #000000; background-color: gray;">
+                <view class="periodBox"></view>
+              </view>
+            </block>
+            <block wx:if="{{slot[i][j]==2}}">
+              <view style="border: 3rpx solid #000000; background-color: rgba(226, 215, 13, 0.924);" bindtap="shiftPeriod" data-i="{{i}}" data-j="{{j}}">
+                <view class="periodBox"></view>
+              </view>
+            </block>
+            <block wx:if="{{slot[i][j]==0}}">
+              <view style="border: 3rpx solid #000000; background-color: rgba(15, 134, 238, 0.496);" bindtap="shiftPeriod" data-i="{{i}}" data-j="{{j}}">
+                <view class="periodBox"></view>
+              </view>
+            </block>
+          </block>
+        </view>
+      </block>
+    </block>
+  </view>
+</view>

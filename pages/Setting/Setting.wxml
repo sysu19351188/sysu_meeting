@@ -1,0 +1,21 @@
+<!--pages/Setting/Setting.wxml-->
+<view class="user">
+  <!-- <image src="/img/background1.jpg"></image> -->
+  <view class="userAvatar">
+    <text class="avatarText">用户头像：</text>
+    <image class="avatarImg" src="{{userInfo.avatarUrl}}"></image>
+  </view>
+  <view class="userNickname">
+    <text>用户名：{{userInfo.nickName}}</text>
+  </view>
+  <view class="SysuEmail">
+    <text>邮箱：{{userInfo.SysuEmail}}</text>
+  </view>
+</view>
+<view id="userButton">
+  <!-- <button bindtap="changeProfile">更换头像</button> -->
+  <button bindtap="tobindEmail">绑定邮箱</button>
+  <button bindtap="changeNickname">修改昵称</button>
+  <button type="warn" bindtap="Logout" id="button1">退出登录</button>
+</view>
+<inputer hide="{{hideController}}" bind:changeNn="refreshNickname"></inputer>

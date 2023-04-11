@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "inputer":"/components/inputToast/inputToast"
+  }
+}

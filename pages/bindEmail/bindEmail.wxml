@@ -1,0 +1,25 @@
+<!--pages/bindEmail/bindEmail.wxml-->
+
+<view class="codeBox">
+  <view>
+    <input type="text" placeholder="请输入绑定邮件地址" bindinput="handleToAddress"/>
+  </view>
+  <view>
+    <text>@mail.sysu.edu.cn </text>
+  </view>
+  <!-- <button bindtap="handleClick">发送邮件</button> -->
+  <view>
+    <text data-id="2" bindtap="handleClick">获取验证码</text>
+  </view>
+</view>
+
+<view class="codeBox">
+  <!-- input框 -->
+  <view>
+    <input type="text" placeholder="请输入验证码" bindinput="handleToCode"/>
+    <!-- <input placeholder="请输入验证码" /> -->
+  </view>
+  <view>
+    <text data-id="2" bindtap="submitEmail">提交</text>
+  </view>
+</view>

@@ -1,0 +1,64 @@
+.title{
+  padding: 13px;
+  font-size: larger;
+  font-weight: bolder;
+  text-align: center;
+}
+.divLine{
+  background: #cacaca;
+  width: 100%;
+  height: 1rpx;
+ }
+
+.content{
+  display: flex;
+  flex-direction: row;
+}
+.content-input{
+  display: flex;
+  flex-direction: row;
+}
+
+ .text{
+  font-size: medium;
+  padding: 13px;
+  font-weight: bolder;
+  width: 50%;
+}
+
+.submit{
+  margin-top: 10px;
+  padding: 8px;
+  height: 40px;
+  background-color: #04BE02;
+  color: #FFFFFF;
+}
+
+.reset{
+  margin-top: 10px;
+  padding: 8px;
+  height: 40px;
+  color: #000000;
+}
+
+.input{
+  font-weight:bolder;
+  padding:13px;
+  text-align: right;
+  font-size: medium;
+}
+.input_textarea{
+  font-weight:bolder;
+  padding:13px;
+  text-align: right;
+  font-size: medium;
+  height: 48.4px;
+}
+
+.picker{
+  font-size: medium;
+  padding: 13px;
+  font-weight: bolder;
+  width:50%;
+  text-align: right;
+}

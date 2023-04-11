@@ -1,0 +1,58 @@
+/* pages/bindEmail/bindEmail.wxss */
+.codeBox {
+  /* 最外层的盒子 */
+  margin: 50rpx;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+
+.codeBox view:first-child {
+  /* input框外层盒子的样式 */
+  width: 70%;
+}
+
+.codeBox view:last-child {
+  /* 按钮外层盒子的样式 */
+  width: 30%;
+  box-shadow: 0rpx 6rpx 16rpx 0rpx rgba(0, 0, 0, 0.16);
+  border: 1px solid rgb(196, 210, 236);
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 60rpx;
+  border-bottom-right-radius: 60rpx;
+  color: rgb(0, 157, 255);
+}
+
+input {
+  /* input框本身的样式 */
+  border: 1px solid rgb(196, 210, 236);
+  opacity: 0.8;
+  box-shadow: 0rpx 6rpx 12rpx 0rpx rgba(0, 0, 0, 0.16);
+  background: #ffffff;
+  padding-left: 20rpx;
+  height: 80rpx;
+  border-top-left-radius: 60rpx;
+  border-bottom-left-radius: 60rpx;
+}
+
+button {
+  /* 按钮本身的样式 */
+  background: none;
+  width: 150rpx;
+  height: 150rpx;
+  display: flex;
+  justify-content: center;
+}
+
+button::after {
+  /* 去掉按钮点击自带的效果 */
+  border: none;
+}
+
+button:hover {
+  /* 去掉按钮触摸自带的效果 */
+  background: none;
+}

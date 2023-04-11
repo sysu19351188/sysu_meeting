@@ -1,0 +1,65 @@
+<!-- <view class="card" >
+    <image class="background" src="../../img/background.png" 
+    mode="widthFix"></image>
+    <text class="Notice">通知</text>
+    <text class="Greeting">欢迎使用本系统</text>
+</view> -->
+
+<block wx:for="{{indexData}}" wx:key="item">
+  <block wx:if="{{item.status==1}}">
+    <navigator url="../introduction/introduction?addr={{item.room_add}}&capacity={{item.capacity}}&status={{item.status}}&introduction={{item.introduction}}&labels={{item.labels}}" open-type="navigate">
+      <view class="card">
+        <!-- <image class="background" src="{{item.image}}"></image> -->
+        <image class="background" src="{{item.image}}"></image>
+        <!-- <image class="logo" src="../../img/log.jpg" mode="widthFix"></image> -->
+        <view class="info">
+          <view class="name">{{item.room_add}}</view>
+          <view class="type">{{item.introduction}}</view>
+        </view>
+      </view>
+    </navigator>
+  </block>
+  <block wx:else>
+    <view class="card">
+        <!-- <image class="background" src="{{item.image}}"></image> -->
+        <image class="gray" src="{{item.image}}"></image>
+        <!-- <image class="logo" src="../../img/log.jpg" mode="widthFix"></image> -->
+        <view class="info">
+          <view class="name">{{item.room_add}}</view>
+          <view class="type">{{item.introduction}}</view>
+        </view>
+      </view>
+  </block>
+ </block>
+
+<!-- <navigator url="../introduction/introduction">
+  <view class="card" >
+    <image class="background" src="../../img/background.png" 
+    mode="widthFix"></image>
+    <image class="logo" src="../../img/log.jpg" mode="widthFix"></image>
+    <view class="info">
+      <view class="name">会议室A</view>
+      <view class="type">大型；方桌；演讲台</view>
+    </view>
+  </view>
+</navigator>
+
+<view class="card" >
+  <image class="background" src="../../img/background.png" 
+  mode="widthFix"></image>
+  <image class="logo" src="../../img/log.jpg" mode="widthFix"></image>
+  <view class="info">
+    <view class="name">会议室B</view>
+    <view class="type">中型；圆桌；投影仪</view>
+  </view>
+</view>
+
+<view class="card" >
+  <image class="background" src="../../img/background.png" 
+  mode="widthFix"></image>
+  <image class="logo" src="../../img/log.jpg" mode="widthFix"></image>
+  <view class="info">
+    <view class="name">会议室C</view>
+    <view class="type">小型；圆桌</view>
+  </view>
+</view> -->

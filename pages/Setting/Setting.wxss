@@ -1,0 +1,67 @@
+/* pages/Setting/Setting.wxss */
+.user{
+  margin-top: 10rpx;
+}
+
+.hintAvatar{
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.userAvatar{
+  width: 90%;
+  margin: 0 auto;
+  display:flex;
+  align-items: center;
+  height: 300rpx;
+}
+
+.avatarImg{
+  /* position:absolute; */
+  display: flex;
+  height:220rpx;
+  width:220rpx;
+  border-radius: 50%;
+  margin:0 auto; 
+}
+
+.avatarText{
+  position: absolute;
+}
+
+.userNickname{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.SysuEmail{
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+#userButton{
+  width: 690rpx;
+  margin: 44rpx auto 0;
+}
+
+#userButton > button{
+  width: 690rpx;
+  height: 88rpx;
+  font-size: 36rpx;
+}
+
+#userButton > button:nth-child(1){
+  /* background: #87cefa;
+  color: #fff; */
+  background: #fff;
+  border: 2rpx solid #87cefa;
+  margin: 36rpx 0;
+}
+
+#userButton > button:nth-child(2){
+  background: #fff;
+  border: 2rpx solid #87cefa;
+  margin: 36rpx 0;
+}

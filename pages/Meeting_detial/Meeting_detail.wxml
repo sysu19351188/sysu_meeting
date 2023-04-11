@@ -1,0 +1,52 @@
+<!--pages/Meeting_detial/Meeting_detail.wxml-->
+<!-- <text>{{id}}</text> -->
+<view class="Meeting">
+  <view class="title">
+    <view class="title-text">会议信息</view>
+  </view>
+  <view class="Info-title">
+    <view style="width:29%">日期</view>
+    <!-- <text>地点</text> -->
+    <view style="width:54%">时间</view>
+    <view style="width:16%">状态</view>
+  </view>
+  <view class="Info">
+    <text>{{item.day}}</text>
+    <!-- <text>{{item.address}}</text> -->
+    <text>{{item.begintime + "-" + item.endtime}}</text>
+    <text>{{item.status}}</text>
+  </view>
+  <!-- <view class="Info-title">
+    <text>时间</text>
+    <text>状态</text>
+  </view>
+  <view class="Info">
+    <text>{{item.begintime + "-" + item.endtime}}</text>
+    <text>{{item.status}}</text>
+  </view> -->
+  <view class="Detail">
+    <view class="D-text">
+      <view>
+        <text>{{"会议地点: " + item.address}}</text>
+      </view>
+      <view>
+        <text>{{"主持人: " + item.host}}</text>
+      </view>
+      <view>
+        <text>{{"会议人数：" + item.number}}</text>
+      </view>
+      <!-- <text>\n</text> -->
+      <!-- <view>
+        <text>会议主题：软工测试测试文本测试文本测试文本</text>
+      </view> -->
+      <!-- <text>\n</text> -->
+      <view>
+        <text>{{"备注：" + item.remarks}}</text>
+      </view>
+    </view>
+    <view class="Buttons">
+      <button bindtap="shareMeeting">分享会议</button>
+      <button bindtap="cancelMeeting" type="warn">取消预约</button>
+    </view>
+  </view>
+</view>
